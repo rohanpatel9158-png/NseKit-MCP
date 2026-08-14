@@ -1892,19 +1892,6 @@ def intraday_scanner_fno_only() -> str:
 # =====================================================================
 # START SERVER
 # =====================================================================
-
-def main():
-    print("🔵 Starting NseKit-MCP HTTP server...")
-    mcp.run(
-        transport="streamable-http",
-        host="0.0.0.0",
-        port=8000,
-        json_response=True,
-    )
-
-
-if __name__ == "__main__":
-    main()
 import os
 
 def main():
