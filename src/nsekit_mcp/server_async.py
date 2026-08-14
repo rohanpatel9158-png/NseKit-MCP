@@ -1905,7 +1905,23 @@ def main():
 
 if __name__ == "__main__":
     main()
+import os
 
+def main():
+    port = int(os.environ.get("PORT", "8000"))
+
+    print(f"🔵 Starting NseKit-MCP HTTP server on port {port}...")
+
+    mcp.run(
+        transport="streamable-http",
+        host="0.0.0.0",
+        port=port,
+        json_response=True,
+    )
+
+
+if __name__ == "__main__":
+    main()
 
 
 # =====================================================================
